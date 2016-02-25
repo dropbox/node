@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-./configure --prefix `pwd`/pkg-out
+./configure --prefix /usr
 make -j16
-make install
+make install DESTDIR=`pwd`/pkg-out
